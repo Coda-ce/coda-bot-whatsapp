@@ -97,6 +97,9 @@ npm run dev
 - O terminal exibirá um QR Code para escanear no WhatsApp do número do bot.
 - Após autenticação, o bot ficará pronto para uso.
 
+> ⚠️ Aviso: Este bot usa uma API não-oficial do WhatsApp.  
+> Existe risco de banimento. A comunidade Coda.ce não se responsabiliza por qualquer bloqueio ou penalidade aplicada pelo WhatsApp.
+
 ## Licença
 
 Este projeto é open-source e está disponível sob a licença MIT.
