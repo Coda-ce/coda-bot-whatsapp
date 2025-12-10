@@ -9,7 +9,7 @@ export default {
 
     // 0. Validações Iniciais (Segurança)
     if (!chat.isGroup) {
-      return message.reply("⚠️ Este comando só funciona em grupos.");
+      return message.reply("Este comando só funciona em grupos.");
     }
 
     // Verifica se o BOT é Admin (Necessário para remover usuários)
@@ -21,7 +21,7 @@ export default {
 
     if (!botIsAdmin) {
       return message.reply(
-        "❌ Eu preciso ser Administrador do grupo para banir usuários."
+        "Eu preciso ser Administrador do grupo para banir usuários."
       );
     }
 
@@ -33,7 +33,7 @@ export default {
 
     if (!authorIsAdmin) {
       return message.reply(
-        "⛔ Apenas administradores podem usar o comando de ban."
+        "Apenas administradores podem usar o comando de ban."
       );
     }
 
@@ -41,7 +41,7 @@ export default {
     const mentions = await message.getMentions();
     if (mentions.length === 0) {
       return message.reply(
-        "⚠️ Mencione o usuário a ser banido.\nEx: !ban @usuario [tempo] [motivo]"
+        "Mencione o usuário a ser banido.\nEx: !ban @usuario [tempo] [motivo]"
       );
     }
     const targetContact = mentions[0];
@@ -57,7 +57,7 @@ export default {
       // Decisão de projeto: Geralmente bots evitam banir outros admins para evitar guerras de bot,
       // mas se você quiser permitir, remova este bloco.
       return message.reply(
-        "⚠️ Por segurança, não posso banir outros administradores."
+        "Por segurança, não posso banir outros administradores."
       );
     }
 
@@ -73,7 +73,7 @@ export default {
     if (argsWithoutMention.length === 0) {
       // 4. Motivo obrigatório
       return message.reply(
-        "⚠️ O motivo do banimento é obrigatório.\nEx: !ban @usuario Spam de links"
+        "O motivo do banimento é obrigatório.\nEx: !ban @usuario Spam de links"
       );
     }
 
@@ -104,7 +104,7 @@ export default {
     }
 
     if (!reason) {
-      return message.reply("⚠️ O motivo do banimento é obrigatório.");
+      return message.reply("O motivo do banimento é obrigatório.");
     }
 
     // 5. Executar o Banimento e Salvar
@@ -148,7 +148,7 @@ export default {
     } catch (error) {
       console.error("Erro ao banir:", error);
       await message.reply(
-        "❌ Ocorreu um erro ao tentar banir o usuário. Verifique se tenho permissões ou se ele já saiu."
+        "Ocorreu um erro ao tentar banir o usuário. Verifique se tenho permissões ou se ele já saiu."
       );
     }
   },
