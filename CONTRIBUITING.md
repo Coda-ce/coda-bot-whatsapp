@@ -55,8 +55,11 @@ git remote add upstream https://github.com/codace/codabot.git
 ```
 
 ### 4. Crie uma Branch para Sua Feature
+Sempre crie sua branch a partir da branch dev e não da main.
 
 ```bash
+git checkout dev
+git pull upstream dev
 git checkout -b feature/nome-da-sua-feature
 ```
 
