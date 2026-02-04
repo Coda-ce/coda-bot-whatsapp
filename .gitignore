@@ -34,3 +34,10 @@ Thumbs.db
 
 # VSCode
 .vscode/
+.idea/
+
+# Custom
+sessions/
+coverage/
+tmp/
+*.swp

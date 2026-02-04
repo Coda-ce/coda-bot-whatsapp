@@ -1,29 +1,26 @@
 {
-  "name": "codace-bot-whatsapp",
+  "name": "waha-whatsapp-bot",
   "version": "1.0.0",
-  "description": "",
-  "type": "module",
-  "main": "index.js",
+  "description": "Bot WhatsApp usando WAHA API",
+  "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon src/index.js",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "enviar": "node enviar-mensagem.js",
+    "receber": "node receber-mensagem.js",
+    "webhook": "node configurar-webhook.js",
+    "test": "node test.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ImDevMota/codace-bot-whatsapp.git"
-  },
-  "keywords": [],
+  "keywords": [
+    "whatsapp",
+    "waha",
+    "bot"
+  ],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ImDevMota/codace-bot-whatsapp/issues"
-  },
-  "homepage": "https://github.com/ImDevMota/codace-bot-whatsapp#readme",
   "dependencies": {
+    "axios": "^1.6.2",
     "dotenv": "^17.2.3",
-    "express": "^5.1.0",
-    "prisma": "^6.19.0",
-    "qrcode-terminal": "^0.12.0",
-    "whatsapp-web.js": "^1.34.2"
+    "express": "^4.18.2"
   }
 }
